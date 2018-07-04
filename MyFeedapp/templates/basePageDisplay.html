@@ -41,7 +41,7 @@
     <div id="loader"></div>
     <div id="menu" style="display:none;">
     <nav  class="navbar navbar-expand-lg navbar-light bg-light" style="background:rgb(0,0,0);">
-        <button style="display:none" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
@@ -49,22 +49,25 @@
                 <a class="navbar-brand" href="#">MyFeed</a>
             </div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:home_page' %}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:sports_page' %}">Sports</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:entertainment_page' %}">Entertainment</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:tech_page' %}">Technology</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:science_page' %}">Science</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:business_page' %}">Business</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:international_page' %}">Internatonal</a></li>
+                <li><a href="{% url 'feed:home_page' %}">Home</a></li>
+                <li><a href="{% url 'feed:sports_page' %}">Sports</a></li>
+                <li><a href="{% url 'feed:entertainment_page' %}">Entertainment</a></li>
+                <li><a href="{% url 'feed:tech_page' %}">Technology</a></li>
+                <li><a href="{% url 'feed:science_page' %}">Science</a></li>
+                <li><a href="{% url 'feed:business_page' %}">Business</a></li>
+                <li><a href="{% url 'feed:international_page' %}">Internatonal</a></li>
                 {% if request.user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:user_saved_page' %}">{{request.user.first_name}}</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'feed:logout_page' %}">Logout</a></li>
+                <li><a href="{% url 'feed:user_saved_page' %}">{{request.user.first_name}}</a></li>
+                <li><a href="{% url 'feed:logout_page' %}">Logout</a></li>
                 {% else %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'feed:login_page' %}">Login</a></li>
+                    <li><a href="{% url 'feed:login_page' %}">Login</a></li>
                 {% endif %}
             </ul>
 
-            
+            <form name = "form" action = "{% url 'feed:search_page' %}" method = "POST"  >
+                        {% csrf_token %}
+                        <input type="text" class = "search" name="search"  placeholder="Search..">
+            </form>
 
         </div>
     </nav>
