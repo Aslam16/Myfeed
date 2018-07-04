@@ -8,7 +8,7 @@ from MyFeedapp.views.url_option_management import *
 
 class SavedArticles(LoginRequiredMixin,ListView):
     template_name = 'user_saved_articles.html'
-    login_url = '/v1/login/'
+    login_url = '/login/'
     context_object_name = 'Values'
     queryset = Article.objects.all()
 

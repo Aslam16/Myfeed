@@ -7,6 +7,7 @@ from MyFeedapp.views.authentication_view import *
 from MyFeedapp.views.user_web_page import *
 
 urlpatterns = [
+    path(r'',HomePage.as_view(),name='first_page'),
     path(r'home/',HomePage.as_view(),name='home_page'),
     path(r'sports/',SportsPage.as_view(),name='sports_page'),
     path(r'entertainment/',EntertainmentPage.as_view(),name='entertainment_page'),
