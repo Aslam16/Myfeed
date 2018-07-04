@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c18b86b1-6586-45d9-80ce-20c67de69489" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFeedapp/templates/basePageDisplay.html" afterPath="$PROJECT_DIR$/MyFeedapp/templates/basePageDisplay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html" afterPath="$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html" afterPath="$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="user_saved_articles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="68">
+              <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -40,22 +41,23 @@
       <file leaf-file-name="signUpAndLogin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="74" lean-forward="false" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+            <state relative-caret-position="187">
+              <caret line="53" column="73" lean-forward="true" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="articles.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-              <folding />
+            <state relative-caret-position="221">
+              <caret line="76" column="58" lean-forward="true" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basePageDisplay.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="basePageDisplay.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/basePageDisplay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="-51">
               <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
               <folding />
             </state>
@@ -173,10 +175,10 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/MyFeed/settings.py" />
         <option value="$PROJECT_DIR$/MyFeed/urls.py" />
-        <option value="$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html" />
-        <option value="$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html" />
         <option value="$PROJECT_DIR$/MyFeedapp/templates/articles.html" />
         <option value="$PROJECT_DIR$/MyFeedapp/templates/basePageDisplay.html" />
+        <option value="$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html" />
+        <option value="$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html" />
       </list>
     </option>
   </component>
@@ -657,25 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="74" lean-forward="false" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyFeed/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -684,21 +667,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/basePageDisplay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="53" column="73" lean-forward="true" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="68">
+          <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/basePageDisplay.html">
+    <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="76" column="58" lean-forward="true" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
