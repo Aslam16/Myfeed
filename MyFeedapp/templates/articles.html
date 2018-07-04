@@ -74,7 +74,7 @@
     {% include 'basePageDisplay.html' %}
 <div id="articles" style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;display:none;">
     <p>.</p>
-    <div class="row">
+    <div class="row" style="margin-top: 70px !important;">
     {% for article in Articles %}
         {% if article.title %}
   <div class="col-sm-6 col-md-4" style="height: 600px !important;">
