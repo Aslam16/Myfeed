@@ -1,1 +1,1 @@
-web: gunicorn MyFeedApp.wsgi
+web: gunicorn MyFeed.wsgi
