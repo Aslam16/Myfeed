@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<html lang="en">
+
+<head>
+    <title>{{Title}}</title>
+    <link rel="stylesheet" href="{% static 'article.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+
+        #articleimage{
+        height: 100% !important;
+        width: 100% !important;
+        }
+
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+         input[type=text]:focus {
+            width: 40%;
+        }
+    </style>
+    <script type="text/javascript">
+
+    window.onload = function() {
+
+        document.getElementById("loader").style.display="none";
+        document.getElementById("menu").style.display="block";
+        document.getElementById("articles").style.display="block";
+        var save_buttons = document.getElementsByClassName("btn btn-danger");
+        var i = 0;
+        for(i = 0;i<save_buttons.length;i++)
+        {
+            save_buttons[i].onclick=function() {saveArticleFunction(this);}
+            console.log(save_buttons[i].id);
+        }
+    };
+        function saveArticleFunction(item)
+        {
+            var article =  item.id;
+            alert("Button Pressed.");
+            $.ajax({
+                url: '/v1/remove/',
+                data:article,
+                dataType: 'json',
+                success: function (data) {
+                    if (data.is_removed) {
+                        document.getElementById("a"+article).style.display = "none";
+                        alert(" Article removed.");
+                    }
+                    else{
+                        alert(" Article Not removed.");
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body >
+    {% include 'basePageDisplay.html' %}
+    <div id="articles" style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;display:none;">
+    {% if is_data_available %}
+        <div class="row" style="margin-top: 70px !important;">
+        {% for article in Articles %}
+            {% if article.title %}
+                <div class="col-sm-6 col-md-4" style="height: 600px !important;" id="a{{article.id}}">
+                    <div class="thumbnail">
+                        <img class="lib-img-show" style="width:100% !important;height:200px !important;" src="{{article.urlToImage}}" />
+                        <div class="caption" style="height:300px;" >
+                            <h3><a href="{{article.url}}">{{article.title}}</a></h3>
+                            <p>{{article.description}}</p>
+                            <div>
+                             {{article.publishedAt}}
+                            </div>
+                            <p><button style="float: right;" id='{{article.id}}' type="button" class="btn btn-danger">Remove</button></p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% else %}
+        <h1 style="text-align:center;margin-top:200px;">You have No Saved Articles Currently</h1>
+    {% endif %}
+
+</body>
+</html>
+<!--author = models.CharField(max_length=50)-->
+    <!--title = models.CharField(max_length=120)-->
+    <!--desciption = models.CharField(max_length=700)-->
+    <!--source_url = models.URLField()-->
+    <!--url_to_image = models.URLField()-->
+    <!--publishedAt = models.DateTimeField()-->
+
+
+

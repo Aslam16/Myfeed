@@ -1,0 +1,74 @@
+{% load static from staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'article.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        #articleimage{
+        height: 100% !important;
+        width: 100% !important;
+        }
+        #loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 60px;
+  height: 60px;
+  margin-top: 20%;
+  margin-left: 48%;
+
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="menu" style="display:none;">
+    <nav  class="navbar navbar-default navbar-fixed-top" style="background:rgb(0,0,0);">
+        <div class="container-fluid" >
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MyFeed</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'feed:home_page' %}">Home</a></li>
+                <li><a href="{% url 'feed:sports_page' %}">Sports</a></li>
+                <li><a href="{% url 'feed:entertainment_page' %}">Entertainment</a></li>
+                <li><a href="{% url 'feed:tech_page' %}">Technology</a></li>
+                <li><a href="{% url 'feed:science_page' %}">Science</a></li>
+                <li><a href="{% url 'feed:business_page' %}">Business</a></li>
+                <li><a href="{% url 'feed:international_page' %}">Internatonal</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'feed:user_saved_page' %}">{{request.user.first_name}}</a></li>
+                <li><a href="{% url 'feed:logout_page' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'feed:login_page' %}">Login</a></li>
+                {% endif %}
+            </ul>
+
+            <form name = "form" action = "{% url 'feed:search_page' %}" method = "POST"  >
+                        {% csrf_token %}
+                        <input type="text" class = "search" name="search"  placeholder="Search..">
+            </form>
+
+        </div>
+    </nav>
+    </div>
+</body>
+</html>
+
