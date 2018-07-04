@@ -64,10 +64,7 @@
                 {% endif %}
             </ul>
 
-            <form class="form-inline my-2 my-lg-0" name = "form" action = "{% url 'feed:search_page' %}" method = "POST"  >
-                        {% csrf_token %}
-                        <input class="form-control mr-sm-2" name="search"  placeholder="Search..">
-            </form>
+            
 
         </div>
     </nav>
