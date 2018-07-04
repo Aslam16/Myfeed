@@ -49,18 +49,18 @@
                 <a class="navbar-brand" href="#">MyFeed</a>
             </div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a href="{% url 'feed:home_page' %}">Home</a></li>
-                <li class="nav-item"><a href="{% url 'feed:sports_page' %}">Sports</a></li>
-                <li class="nav-item"><a href="{% url 'feed:entertainment_page' %}">Entertainment</a></li>
-                <li class="nav-item"><a href="{% url 'feed:tech_page' %}">Technology</a></li>
-                <li class="nav-item"><a href="{% url 'feed:science_page' %}">Science</a></li>
-                <li class="nav-item"><a href="{% url 'feed:business_page' %}">Business</a></li>
-                <li class="nav-item"><a href="{% url 'feed:international_page' %}">Internatonal</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:home_page' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:sports_page' %}">Sports</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:entertainment_page' %}">Entertainment</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:tech_page' %}">Technology</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:science_page' %}">Science</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:business_page' %}">Business</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:international_page' %}">Internatonal</a></li>
                 {% if request.user.is_authenticated %}
-                <li class="nav-item"><a href="{% url 'feed:user_saved_page' %}">{{request.user.first_name}}</a></li>
-                <li class="nav-item"><a href="{% url 'feed:logout_page' %}">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:user_saved_page' %}">{{request.user.first_name}}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feed:logout_page' %}">Logout</a></li>
                 {% else %}
-                    <li class="nav-item"><a href="{% url 'feed:login_page' %}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'feed:login_page' %}">Login</a></li>
                 {% endif %}
             </ul>
 
