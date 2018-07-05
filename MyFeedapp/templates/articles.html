@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <style>
 
         #articleimage{
@@ -16,23 +16,7 @@
         width: 100% !important;
         }
 
-        input[type=text] {
-            width: 130px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
 
-            background-color: white;
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-         input[type=text]:focus {
-            width: 35%;
-        }
     </style>
     <script>
 
@@ -74,7 +58,7 @@
     {% include 'basePageDisplay.html' %}
 <div id="articles" style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;display:none;">
     <p>.</p>
-    <div class="row" style="margin-top: 70px !important;">
+    <div class="row" style="margin-top: 70px !important;font-size: initial !important;">
     {% for article in Articles %}
         {% if article.title %}
   <div class="col-sm-6 col-md-4" style="height: 600px !important;">

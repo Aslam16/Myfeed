@@ -18,4 +18,4 @@ def search(request):
         jsonObjects = converJsonDateToPython(jsonObjects)
         context['Title'] = query
         context['Articles'] = jsonObjects
-    return render(request, 'basePageDisplay.html', context)
+    return render(request, 'articles.html', context)
