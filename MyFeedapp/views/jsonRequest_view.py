@@ -7,6 +7,7 @@ def getData(url):
     """returns the top 20 json objects of the specified url :)"""
     import ssl
     ssl._create_default_https_context = ssl._create_unverified_context
+    url = url.replace(' ','%20')
     response = request.urlopen(url)
     string = response.read().decode('utf-8')
     json_Response = json.loads(string)
