@@ -56,14 +56,14 @@
 <body >
 
     {% include 'basePageDisplay.html' %}
-<div id="articles" style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;display:none;">
+<div id="articles" class="container-fluid"  style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;display:none;">
     <p>.</p>
     <div class="row" style="margin-top: 70px !important;font-size: initial !important;">
     {% for article in Articles %}
         {% if article.title %}
   <div class="col-sm-6 col-md-4" style="height: 600px !important;">
     <div class="thumbnail">
-      <img class="lib-img-show" style="width:100% !important;height:200px !important;" src="{{article.urlToImage}}" />
+      <img class="lib-img-show" style="height:200px !important;" src="{{article.urlToImage}}"  alt="alt: :) img of {{article.title}}"/>
       <div class="caption" style="height:300px;" >
         <h3><a href="{{article.url}}">{{article.title}}</a></h3>
           <p>{{article.description}}</p>
