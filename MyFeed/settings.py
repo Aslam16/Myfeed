@@ -25,7 +25,7 @@ SECRET_KEY = '*=kc6_d0d8vzv*m+*fp(8x_itv34$qc^f7wqs*_76!#-1_1-=$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['myfeed16.herokuapp.com',]
+ALLOWED_HOSTS = ['myfeed16.herokuapp.com','127.0.0.1']
 
 
 # Application definition
