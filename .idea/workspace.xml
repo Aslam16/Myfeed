@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c18b86b1-6586-45d9-80ce-20c67de69489" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html" afterPath="$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html" afterPath="$PROJECT_DIR$/MyFeedapp/templates/user_saved_articles.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="signUpAndLogin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="284">
+              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -680,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyFeedapp/templates/signUpAndLogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        <state relative-caret-position="284">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
