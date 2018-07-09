@@ -36,8 +36,7 @@ from MyFeedapp.models import *
 
 
 def save(request):
-    import ipdb
-    ipdb.set_trace()
+
     ab=list()
     try:
         for i in request.GET.keys():
@@ -55,8 +54,6 @@ def save(request):
 
 
 def remove(request):
-    import ipdb
-    ipdb.set_trace()
     ab=list()
     for i in request.GET.keys():
         ab.append(i)

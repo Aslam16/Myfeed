@@ -71,11 +71,12 @@
         }
     </script>
 </head>
-<body >
+<body style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;">
     {% include 'basePageDisplay.html' %}
-    <div id="articles" style="background-image:url({% static 'grey_wash_wall.png' %}); background-repeat:repeat; background-attachment: fixed;display:none;">
+    <div id="articles" style="display:none;">
+        <p>.</p>
     {% if is_data_available %}
-        <div class="row" style="font-size: initial !important;" >
+        <div class="row" style="margin-top: 70px !important;font-size: initial !important;" >
         {% for article in Articles %}
             {% if article.title %}
                 <div class="col-sm-6 col-md-4" style="height: 600px !important;" id="a{{article.id}}">

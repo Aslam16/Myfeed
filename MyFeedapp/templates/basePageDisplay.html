@@ -99,7 +99,7 @@
       <li class="nav-item"><a class="nav-link" href="{% url 'feed:business_page' %}">Business</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'feed:international_page' %}">Internatonal</a></li>
       {% if request.user.is_authenticated %}
-      <li class="nav-item"><a class="nav-link" href="{% url 'feed:user_saved_page' %}">{{request.user.first_name}}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'feed:user_saved_page' %}">Saved Pages of {{request.user.first_name}}</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'feed:logout_page' %}">Logout</a></li>
       {% else %}
       <li class="nav-item"><a class="nav-link" href="{% url 'feed:login_page' %}">Login</a></li>
