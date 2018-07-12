@@ -1,6 +1,6 @@
-__Base_Url = "api provider url"
-__Api_key = "add your api key"
-__Search_URL="add your search url"
+__Base_Url = "https://newsapi.org/v2/top-headlines?"
+__Api_key = "apiKey=e894a0f5703c4c41bf2487bdcf8e4e5d"
+__Search_URL="https://newsapi.org/v2/everything?pageSize=30&"
 
 
 Business = "category=business"
