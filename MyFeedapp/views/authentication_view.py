@@ -52,18 +52,21 @@ class signUp(View):
         form = signUpForm(request.POST)
 
         if form.is_valid():
-            user = authenticate(
-                username=form.cleaned_data['username'],
-                password=form.cleaned_data['password']
-            )
-            if user is None:
-                user = User.objects.create_user(
-                    **form.cleaned_data
+            try:
+                user = authenticate(
+                    username=form.cleaned_data['username'],
+                    password=form.cleaned_data['password']
                 )
-                user.save()
-                login(request, user)
-                return redirect(reverse_lazy("feed:home_page"))
-            return redirect(reverse_lazy("feed:signup_page"))
+                if user is None:
+                    user = User.objects.create_user(
+                        **form.cleaned_data
+                    )
+                    user.save()
+                    login(request, user)
+                    return redirect(reverse_lazy("feed:home_page"))
+                return redirect(reverse_lazy("feed:signup_page"))
+            except:
+                return redirect(reverse_lazy("feed:signup_page"))
         # return render(
         #         request,
         #         template_name='collageBootstrap.html',

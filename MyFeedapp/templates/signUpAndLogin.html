@@ -60,22 +60,23 @@
     <div class="container-fluid"  style="font-size: initial !important;">
         <h2 style="text-align:center !important;color:white;">{{Title}}</h2>
         <form method="post">
-        {% csrf_token %}
-        <table id="tabl" class="table">
-        {% for field in form %}
-            <tr>
-                {{ field.errors }}
-                <td>{{ field.label_tag }}</td>
-                <td>{{ field }}</td>
-            </tr>
-        {% endfor %}
-        </table>
-        <input class = "btn btn-success" type="submit"  style="width: 50% !important;margin-left: 25% !important;" value="{{submit_text}}"/>
+            {% csrf_token %}
+            <table id="tabl" class="table">
+                {% for field in form %}
+                <tr>
+                    {{ field.errors }}
+                    <td>{{ field.label_tag }}</td>
+                    <td>{{ field }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <input class = "btn btn-success" type="submit"  style="width: 50% !important;margin-left: 25% !important;" value="{{submit_text}}"/>
         </form>
         <br/>
         <a href="{% url link_to_next %}"><button class = "btn btn-success" style="width: 50% !important;margin-left: 25% !important;" >{{text_of_next}}</button></a>
     </div>
 </div>
+    <p style="margin-top:70px; color:white;font-size: medium;">Please choose another username if being <b>redirected</b> to same page<br/>As it may be alredy taken :) </p>
 </div>
 </body>
 </html>
